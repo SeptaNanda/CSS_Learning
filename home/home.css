@@ -1,0 +1,501 @@
+/* ===========================
+       VARIABEL WARNA & FONT
+    =========================== */
+    :root {
+      --biru-utama: #3a6ef7;
+      --biru-gelap: #1e3fa8;
+      --biru-muda: #e8efff;
+      --putih: #ffffff;
+      --abu-terang: #f5f7ff;
+      --abu-teks: #666666;
+      --teks-gelap: #1a1a2e;
+      --bayangan: 0 4px 16px rgba(58, 110, 247, 0.12);
+    }
+
+    /* ===========================
+       RESET DASAR
+    =========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--teks-gelap);
+      background: var(--putih);
+      line-height: 1.6;
+    }
+
+    /* ===========================
+       HERO / BANNER UTAMA
+    =========================== */
+    .hero {
+      background: linear-gradient(135deg, var(--biru-gelap) 0%, var(--biru-utama) 100%);
+      padding: 80px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 340px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Bintang-bintang dekorasi */
+    .hero::before {
+      content: '✦  ✦  ✦';
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      color: rgba(255,255,255,0.2);
+      font-size: 20px;
+      letter-spacing: 30px;
+    }
+
+    .hero-teks {
+      max-width: 480px;
+    }
+
+    .hero-teks h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--putih);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .hero-teks .subjudul {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .hero-teks p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+
+    .grup-tombol {
+      display: flex;
+      gap: 14px;
+    }
+
+    .tombol-utama {
+      background: var(--putih);
+      color: var(--biru-utama);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .tombol-outline {
+      background: transparent;
+      color: var(--putih);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 2px solid rgba(255,255,255,0.6);
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .tombol-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Ilustrasi kode di sebelah kanan hero */
+    .hero-ilustrasi {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .kartu-kode {
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 16px;
+      width: 180px;
+    }
+
+    .baris-kode {
+      height: 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .baris-kode.panjang   { background: #61dafb; width: 80%; }
+    .baris-kode.sedang    { background: #f7c948; width: 60%; }
+    .baris-kode.pendek    { background: rgba(255,255,255,0.4); width: 45%; }
+
+    .kartu-preview {
+      background: var(--putih);
+      border-radius: 12px;
+      padding: 14px;
+      width: 140px;
+    }
+
+    .kotak-preview {
+      height: 18px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .kotak-preview.merah   { background: #ff6b6b; }
+    .kotak-preview.hijau   { background: #51cf66; }
+    .kotak-preview.kuning  { background: #ffd43b; width: 70%; }
+
+    /* ===========================
+       SECTION UMUM
+    =========================== */
+    section {
+      padding: 60px 60px;
+    }
+
+    section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    section p.deskripsi {
+      font-size: 14px;
+      color: var(--abu-teks);
+      margin-bottom: 36px;
+    }
+
+    /* ===========================
+       TENTANG APLIKASI - 4 KARTU
+    =========================== */
+    .tentang {
+      background: var(--putih);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .kartu-fitur {
+      border: 1px solid #e8ecff;
+      border-radius: 12px;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ikon-fitur {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .ikon-biru   { background: var(--biru-muda); }
+    .ikon-ungu   { background: #f0e8ff; }
+    .ikon-merah  { background: #fff0e8; }
+    .ikon-abu    { background: #f0f0f0; }
+
+    .kartu-fitur h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    /* ===========================
+       FITUR UTAMA - 3 KARTU BESAR
+    =========================== */
+    .fitur-utama {
+      background: var(--abu-terang);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .kartu-besar {
+      background: var(--putih);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--bayangan);
+    }
+
+    .thumbnail {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      position: relative;
+    }
+
+    .thumbnail.biru1 { background: linear-gradient(135deg, #3a6ef7, #6b48ff); }
+    .thumbnail.biru2 { background: linear-gradient(135deg, #2d85f7, #3a6ef7); }
+    .thumbnail.hijau { background: linear-gradient(135deg, #0ec4c4, #2d85f7); }
+
+    /* Dekorasi dalam thumbnail */
+    .thumbnail .dekorasi {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .thumbnail .titik-plus {
+      position: absolute;
+      color: rgba(255,255,255,0.5);
+      font-size: 20px;
+    }
+
+    .thumbnail .titik-plus.kiri-atas  { top: 14px; left: 14px; }
+    .thumbnail .titik-plus.kanan-bawah { bottom: 14px; right: 14px; }
+
+    .isi-kartu-besar {
+      padding: 20px;
+    }
+
+    .isi-kartu-besar h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .label-fitur {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--abu-teks);
+    }
+
+    .label-fitur span {
+      color: var(--biru-utama);
+    }
+
+    /* ===========================
+       CARA KERJA - 4 LANGKAH
+    =========================== */
+    .cara-kerja {
+      background: var(--putih);
+    }
+
+    .grid-langkah {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .kartu-langkah {
+      background: var(--abu-terang);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .nomor-langkah {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--biru-utama);
+      margin-bottom: 6px;
+    }
+
+    .kartu-langkah h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .sub-langkah {
+      background: var(--putih);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--abu-teks);
+    }
+
+    .ikon-kecil {
+      width: 32px;
+      height: 32px;
+      background: var(--biru-muda);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ===========================
+       UNTUK SIAPA - 4 KARTU PERSONA
+    =========================== */
+    .untuk-siapa {
+      background: var(--abu-terang);
+    }
+
+    .grid-persona {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .kartu-persona {
+      background: var(--putih);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--bayangan);
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+
+    .avatar.ungu  { background: #f0e8ff; }
+    .avatar.biru  { background: var(--biru-muda); }
+    .avatar.gelap { background: #e8e8f0; }
+    .avatar.merah { background: #ffe8e8; }
+
+    .kartu-persona h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ===========================
+       TAMPILAN APLIKASI - SCREENSHOT
+    =========================== */
+    .tampilan-app {
+      background: var(--putih);
+    }
+
+    .grid-screenshot {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .kartu-screenshot {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--bayangan);
+      border: 1px solid #eef0ff;
+    }
+
+    .layar-mockup {
+      background: #f0f4ff;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      gap: 8px;
+    }
+
+    /* Mockup bar atas layar */
+    .bar-atas {
+      display: flex;
+      gap: 6px;
+    }
+
+    .titik-merah  { width: 8px; height: 8px; background: #ff5f57; border-radius: 50%; }
+    .titik-kuning { width: 8px; height: 8px; background: #febc2e; border-radius: 50%; }
+    .titik-hijau  { width: 8px; height: 8px; background: #28c840; border-radius: 50%; }
+
+    /* Konten dalam layar mockup */
+    .baris-mockup {
+      height: 10px;
+      border-radius: 3px;
+      background: #d0d8f0;
+    }
+
+    .baris-mockup.pendek  { width: 50%; }
+    .baris-mockup.sedang  { width: 70%; }
+    .baris-mockup.panjang { width: 90%; }
+
+    .blok-kode-mockup {
+      background: #1e3fa8;
+      border-radius: 6px;
+      flex: 1;
+      padding: 8px;
+    }
+
+    .baris-kode-mockup {
+      height: 6px;
+      border-radius: 2px;
+      margin-bottom: 6px;
+    }
+
+    .baris-kode-mockup.merah   { background: #ff6b6b; width: 60%; }
+    .baris-kode-mockup.kuning  { background: #ffd43b; width: 80%; }
+    .baris-kode-mockup.putih   { background: rgba(255,255,255,0.5); width: 40%; }
+
+    .kotak-kanvas {
+      flex: 1;
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      padding: 8px;
+    }
+
+    .shape {
+      border-radius: 6px;
+    }
+
+    .shape.merah  { background: #ff6b6b; width: 60px; height: 50px; }
+    .shape.hijau  { background: #51cf66; width: 50px; height: 70px; }
+    .shape.kuning { background: #ffd43b; width: 40px; height: 40px; border-radius: 50%; }
+
+    .keterangan-screenshot {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--teks-gelap);
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: var(--teks-gelap);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 24px 60px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer strong {
+      color: var(--putih);
+    }

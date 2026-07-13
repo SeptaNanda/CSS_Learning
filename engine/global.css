@@ -1,0 +1,158 @@
+/* ========================================
+   RESET
+======================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#0f172a;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar{
+  width:100%;
+  height:80px;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 80px;
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+
+  color:#2563eb;
+}
+
+/* ========================================
+   MENU
+======================================== */
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+
+/* ========================================
+   LINK
+======================================== */
+
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+
+  color:#0f172a;
+
+  transition:.3s;
+
+  cursor:pointer;
+}
+
+.nav-link:hover{
+  color:#2563eb;
+}
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.nav-item{
+  position:relative;
+
+  height:80px;
+
+  display:flex;
+  align-items:center;
+}
+
+.dropdown{
+
+  position:absolute;
+
+  top:70px;
+  left:0;
+
+  width:240px;
+
+  background:white;
+
+  border-radius:18px;
+
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
+
+  padding:14px;
+
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:.25s ease;
+
+  z-index:999;
+}
+
+.nav-item:hover .dropdown{
+
+  opacity:1;
+  visibility:visible;
+
+  transform:translateY(0);
+
+}
+
+.dropdown a{
+
+  padding:12px 14px;
+
+  border-radius:12px;
+
+  transition:.3s;
+
+  font-size:14px;
+  color:#0f172a;
+
+}
+
+.dropdown a:hover{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+@media(max-width:1000px){
+
+  .navbar{
+    padding:0 30px;
+  }
+
+}

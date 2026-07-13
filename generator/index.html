@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>CSS Generator</title>
+
+  <!-- FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- GLOBAL -->
+
+  <link
+    rel="stylesheet"
+    href="../engine/global.css"
+  >
+
+  <!-- GENERATOR -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- INTERACT -->
+
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ========================================
+       NAVBAR
+  ======================================== -->
+
+  <nav class="navbar">
+
+    <a href="../home/index.html" class="logo">
+      CSS Learning
+    </a>
+
+    <div class="nav-menu">
+
+      <a
+        href="../home/index.html"
+        class="nav-link"
+      >
+        Home
+      </a>
+
+      <div class="nav-item">
+
+        <span class="nav-link">
+          Materi
+        </span>
+
+        <div class="dropdown">
+
+          <a href="../documentation/margin/index.html">
+            Margin
+          </a>
+
+          <a href="../documentation/padding/index.html">
+            Padding
+          </a>
+
+          <a href="../documentation/fonts/index.html">
+            Fonts
+          </a>
+
+          <a href="../documentation/background-color/index.html">
+            Background Color
+          </a>
+
+          <a href="../documentation/flex/index.html">
+            Flex
+          </a>
+
+          <a href="../documentation/grid/index.html">
+            Grid
+          </a>
+
+        </div>
+
+      </div>
+
+      <a
+        href="../generator/index.html"
+        class="nav-link"
+      >
+        Code Generator
+      </a>
+
+      <a
+        href="../guide/index.html"
+        class="nav-link"
+      >
+        Guide
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- ========================================
+       GENERATOR
+  ======================================== -->
+
+  <section class="generator-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="sidebar-title">
+        <h2>CSS Generator</h2>
+
+        <p>
+          Build layouts visually and generate HTML + CSS instantly.
+        </p>
+      </div>
+
+      <!-- ACTIONS -->
+
+      <div class="tool-group">
+
+        <h3>Shapes</h3>
+
+        <button id="add-rect">
+          Rectangle
+        </button>
+
+        <button id="add-circle">
+          Circle
+        </button>
+
+        <button id="add-text">
+          Text Box
+        </button>
+
+      </div>
+
+      <div class="tool-group">
+
+        <h3>Actions</h3>
+
+        <button id="generate">
+          Generate Code
+        </button>
+
+        <button id="delete-shape">
+          Delete Selected
+        </button>
+
+      </div>
+
+      <div class="tool-group">
+
+        <h3>Style</h3>
+
+        <label for="shape-color" class="color-label">
+          Shape Color
+        </label>
+
+        <input
+          type="color"
+          id="shape-color"
+          value="#2563eb"
+        >
+
+      </div>
+
+      <!-- OUTPUT -->
+
+      <div class="code-output">
+
+        <div class="output-header">
+          Generated Code
+        </div>
+
+        <textarea
+          id="code-box"
+          readonly
+        ></textarea>
+
+        <button id="copy-code">
+          Copy Code
+        </button>
+
+      </div>
+
+    </aside>
+
+    <!-- CANVAS -->
+
+    <main class="workspace">
+
+      <div class="workspace-header">
+
+        <h2>Canvas Workspace</h2>
+
+        <p>
+          Drag, resize and edit your components directly.
+        </p>
+
+      </div>
+
+      <div
+        class="canvas"
+        id="canvas"
+      ></div>
+
+    </main>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
